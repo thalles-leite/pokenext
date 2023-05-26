@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import PokemonCard from '@/components/PokemonCard';
 
@@ -37,8 +38,8 @@ export default function Home({ pokemons }) {
       </div>
 
       <div className="flex flex-wrap justify-center gap-6">
-        {pokemons.map((pokemon) => (
-          <PokemonCard pokemon={pokemon} />
+        {pokemons.map((pokemon, index) => (
+          <PokemonCard key={index} pokemon={pokemon} />
         ))}
       </div>
 
